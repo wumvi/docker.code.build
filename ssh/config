@@ -1,0 +1,6 @@
+Host *
+	StrictHostKeyChecking no
+Host gitlab.com
+    Hostname        gitlab.com
+    IdentityFile    ~/.ssh/id_rsa
+    IdentitiesOnly yes
