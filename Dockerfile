@@ -37,6 +37,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	cd / && \
 	git clone https://github.com/wumvi/app.gcc-webpack.git /gcc-webpack/ --depth 1 && \
 	cd /gcc-webpack/ && \
+	npm i && \
 	composer install --no-interaction --no-dev --no-progress --no-suggest --optimize-autoloader --prefer-dist --ignore-platform-reqs --no-plugins && \
 	rm -rf .git && \
 	cd / && \
