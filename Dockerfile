@@ -13,7 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
     apt-get --no-install-recommends -qq -y install gnupg wget build-essential zip unzip vim ca-certificates openssl ssh git cmake lsb-release apt-transport-https -y && \
 	apt-get --no-install-recommends -qq -y install default-jre && \
 	curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
-    apt-get --no-install-recommends -qq -y install nodejs && \
+    apt-get --no-install-recommends -qq -y install nodejs zopfli && \
 	curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 	mkdir /soft/ && \
 	cd /soft/ && \
