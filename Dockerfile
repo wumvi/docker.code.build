@@ -1,7 +1,7 @@
-FROM php:7.2.1-cli-stretch
+FROM wumvi/php.base:7.1
 MAINTAINER Vitaliy Kozlenko <vk@wumvi.com>
 
-LABEL version="2.3.2"
+LABEL version="2.3.4" php="7.1"
 
 ADD /cmd/*.sh  /
 ADD /ssh/config  /root/.ssh/config
