@@ -14,6 +14,7 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	apt-get --no-install-recommends -qq -y install default-jre && \
 	curl -sL https://deb.nodesource.com/setup_9.x | bash - && \
     apt-get --no-install-recommends -qq -y install nodejs zopfli && \
+    npm config set cache /tmp/cache/npm/ --global && \
 	curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
 	mkdir -p /soft/ && \
 	#
@@ -51,6 +52,8 @@ RUN DEBIAN_FRONTEND=noninteractive && \
 	apt-get remove -y wget build-essential cmake  && \
 	apt-get autoremove -y && \
 	rm -rf /soft/ && \
+	rm -rf /root/.composer/ && \
+	rm -rf /root/.npm/ && \
 	rm -rf /var/lib/apt/lists/* && \
 	echo 'end'
 

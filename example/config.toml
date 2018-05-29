@@ -1,0 +1,16 @@
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "gitlab-runner-name"
+  url = "https://gitlab.com/"
+  token = "secret"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "wumvi/code.build:7.1"
+    privileged = false
+    disable_cache = false
+    volumes = ["/tmp/cache/:/tmp/cache/"]
+    shm_size = 0
+  [runners.cache]
